@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Ressources · Caisse A Outils{% endblock %}
+
+{% block content %}
+  <section class="border-b border-slate-800 bg-slate-900/40">
+    <div class="mx-auto max-w-6xl px-6 py-16">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div class="max-w-3xl space-y-3">
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-400">Snippets & Tips</p>
+          <h1 class="text-3xl font-semibold text-white md:text-4xl">Ressources partagées en JSON, YAML ou TOML</h1>
+          <p class="text-sm text-slate-300">
+            Chaque fichier décrit son contenu et peut embarquer du Markdown ou référencer un fichier externe. Ajoutez vos propres conseilles en créant un fichier dans `data/resources/`.
+          </p>
+        </div>
+        <a href="{% url 'toolbox:home' %}" class="text-sm font-semibold text-sky-300 hover:text-sky-200">Retour à l'accueil</a>
+      </div>
+      <ul class="mt-12 grid gap-6 md:grid-cols-3">
+        {% for resource in resources %}
+          <li class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm">
+            <div class="flex items-center justify-between text-xs uppercase tracking-widest text-slate-400">
+              <span>{{ resource.source_format }}</span>
+              {% if resource.categories %}
+                <span>{{ resource.categories|join:", " }}</span>
+              {% endif %}
+            </div>
+            <h2 class="mt-4 text-lg font-semibold text-white">
+              <a href="{% url 'toolbox:resource_detail' resource.slug %}" class="hover:text-sky-300">{{ resource.title }}</a>
+            </h2>
+            <p class="mt-3 text-sm text-slate-300">{{ resource.summary }}</p>
+            <div class="mt-6">
+              <a href="{% url 'toolbox:resource_detail' resource.slug %}" class="text-sm font-semibold text-sky-300 hover:text-sky-200">
+                Lire la ressource
+              </a>
+            </div>
+          </li>
+        {% empty %}
+          <li class="rounded-2xl border border-dashed border-slate-700 bg-slate-900/60 p-6 text-center text-sm text-slate-400">
+            Créez un fichier JSON, YAML ou TOML dans `data/resources/` pour ajouter une ressource.
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Caisse A Outils{% endblock %}
+
+{% block content %}
+  <section class="relative">
+    <div class="mx-auto flex min-h-screen max-w-6xl flex-col justify-center gap-12 px-6 py-16">
+      <div class="max-w-3xl space-y-6">
+        <span class="inline-flex items-center rounded-full border border-slate-700 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-slate-300">
+          Communauté Django Cameroun
+        </span>
+        <h1 class="text-4xl font-semibold leading-tight text-white md:text-5xl">
+          Caisse A Outils centralise les astuces, outils et snippets pour accélérer vos projets Django.
+        </h1>
+        <p class="text-lg text-slate-300 md:text-xl">
+          Explorez les pratiques testées par la communauté, ajoutez vos découvertes en JSON, YAML ou TOML et partagez vos guides au format Markdown.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="{% url 'toolbox:tool_list' %}" class="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-200">
+            Parcourir les outils
+          </a>
+          <a href="{% url 'toolbox:resource_list' %}" class="inline-flex items-center rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 hover:border-slate-500">
+            Voir les ressources
+          </a>
+        </div>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        {% for item in hero_tools %}
+          <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm">
+            <h2 class="text-xl font-semibold text-white">{{ item.name }}</h2>
+            <p class="mt-3 text-sm text-slate-300">{{ item.summary }}</p>
+            <a href="{% url 'toolbox:tool_detail' item.slug %}" class="mt-4 inline-flex items-center text-sm font-semibold text-sky-300 hover:text-sky-200">
+              Lire la fiche
+            </a>
+          </article>
+        {% empty %}
+          <p class="text-sm text-slate-400">Ajoutez votre premier outil en éditant `data/tools.json`.</p>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-slate-800 bg-slate-900/40">
+    <div class="mx-auto max-w-6xl px-6 py-16">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-semibold text-white">Ressources communautaires</h2>
+          <p class="mt-2 text-sm text-slate-300">Les snippets et tips sont lisibles depuis JSON, YAML ou TOML avec rendu Markdown.</p>
+        </div>
+        <a href="{% url 'toolbox:resource_list' %}" class="inline-flex items-center rounded-full border border-slate-700 px-5 py-2 text-xs font-semibold uppercase tracking-widest text-slate-200 hover:border-slate-500">
+          Tout afficher
+        </a>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        {% for resource in hero_resources %}
+          <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm">
+            <div class="flex items-center justify-between text-xs uppercase tracking-widest text-slate-400">
+              <span>{{ resource.source_format }}</span>
+              {% if resource.categories %}
+                <span>{{ resource.categories|join:", " }}</span>
+              {% endif %}
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-white">{{ resource.title }}</h3>
+            <p class="mt-3 text-sm text-slate-300">{{ resource.summary }}</p>
+            <a href="{% url 'toolbox:resource_detail' resource.slug %}" class="mt-4 inline-flex items-center text-sm font-semibold text-sky-300 hover:text-sky-200">
+              Consulter
+            </a>
+          </article>
+        {% empty %}
+          <p class="text-sm text-slate-400">Ajoutez vos tips dans `data/resources/` au format JSON, YAML ou TOML.</p>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

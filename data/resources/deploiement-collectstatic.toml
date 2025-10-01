@@ -1,0 +1,18 @@
+slug = "deploiement-collectstatic"
+title = "Collecter les assets pour le déploiement"
+summary = "Rappels essentiels pour préparer les fichiers statiques avant un déploiement."
+categories = ["deploiement", "static"]
+
+[content]
+markdown = """
+## Commandes incontournables
+```bash
+python manage.py collectstatic --noinput
+```
+
+Ajoutez l'option `--clear` lorsque vous devez repartir de zéro sur un hébergement partagé.
+
+## Vérifications
+- Analysez le répertoire `STATIC_ROOT` pour valider les fichiers générés.
+- Servez un échantillon d'assets en local pour repérer les chemins cassés avant la mise en ligne.
+"""

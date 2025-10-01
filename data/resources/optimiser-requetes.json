@@ -1,0 +1,7 @@
+{
+  "slug": "optimiser-requetes",
+  "title": "Optimiser les requêtes ORM",
+  "summary": "Conseils pratiques pour réduire le nombre de requêtes SQL dans vos vues Django.",
+  "categories": ["performance", "base de données"],
+  "content_path": "resources/content/query-optimisation.md"
+}

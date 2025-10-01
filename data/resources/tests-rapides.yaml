@@ -1,0 +1,18 @@
+slug: tests-rapides
+title: "Tests rapides avec pytest"
+summary: "Boostez votre productivité avec des fixtures légères et des commandes concentrées."
+categories:
+  - testing
+  - qualité
+body: |
+  ## Lancer seulement un dossier
+  ```bash
+  pytest tests/api/
+  ```
+
+  ## Rejouer le dernier échec
+  ```bash
+  pytest --lf
+  ```
+
+  Pour accélérer, combinez le marqueur `-k` avec des motifs explicites, puis ajoutez `-q` pour un retour concis dans votre terminal.

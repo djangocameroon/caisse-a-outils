@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "django-debug-toolbar",
+    "name": "Django Debug Toolbar",
+    "summary": "Inspect queries, cache usage, and performance metrics straight from your browser while developing Django apps.",
+    "website": "https://github.com/jazzband/django-debug-toolbar",
+    "categories": ["debug", "performance"],
+    "content_path": "tools/django-debug-toolbar.md"
+  },
+  {
+    "slug": "whitenoise",
+    "name": "Whitenoise",
+    "summary": "Serve static assets directly from your Django app with zero config during deploys.",
+    "website": "https://github.com/evansd/whitenoise",
+    "categories": ["deployment", "static"],
+    "content_path": "tools/whitenoise.md"
+  },
+  {
+    "slug": "pytest-django",
+    "name": "pytest-django",
+    "summary": "Run expressive tests with pytest while keeping Django integrations simple.",
+    "website": "https://pytest-django.readthedocs.io/",
+    "categories": ["testing"],
+    "content_path": "tools/pytest-django.md"
+  }
+]
