@@ -22,5 +22,13 @@
     "website": "https://pytest-django.readthedocs.io/",
     "categories": ["testing"],
     "content_path": "tools/pytest-django.md"
+  },
+  {
+    "slug": "django-rest-framework",
+    "name": "Django REST Framework",
+    "summary": "Powerful and flexible toolkit for building Web APIs in Django.",
+    "website": "https://www.django-rest-framework.org/",
+    "categories": ["api", "rest"],
+    "content_path": "tools/django-rest-framework.md"
   }
 ]
