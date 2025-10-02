@@ -30,5 +30,13 @@
     "website": "https://www.django-rest-framework.org/",
     "categories": ["api", "rest"],
     "content_path": "tools/django-rest-framework.md"
+  },
+  {
+    "slug": "uv",
+    "name": "UV",
+    "summary": "An extremely fast Python package installer and resolver, written in Rust. Designed as a drop-in replacement for pip and pip-tools.",
+    "website": "https://github.com/astral-sh/uv",
+    "categories": ["package-management", "performance", "development"],
+    "content_path": "tools/uv.md"
   }
 ]
