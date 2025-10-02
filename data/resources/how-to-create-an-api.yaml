@@ -1,0 +1,100 @@
+slug: how-to-create-an-api
+title: "Créer une API avec Django REST Framework"
+summary: "Guide pratique pour développer des API RESTful robustes avec Django et DRF."
+categories:
+  - django
+  - api
+  - backend
+body: |
+  ## Installation et configuration
+
+  ### Installer Django REST Framework
+  ```bash
+  pip install djangorestframework
+  ```
+
+  ### Configurer dans settings.py
+  ```python
+  INSTALLED_APPS = [
+      # ... vos autres applications
+      'rest_framework',
+  ]
+
+  REST_FRAMEWORK = {
+      'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+      'PAGE_SIZE': 10,
+      'DEFAULT_AUTHENTICATION_CLASSES': [
+          'rest_framework.authentication.TokenAuthentication',
+      ],
+  }
+  ```
+
+  ## Créer votre première API
+
+  ### 1. Définir le modèle
+  ```python
+  # models.py
+  from django.db import models
+
+  class Article(models.Model):
+      title = models.CharField(max_length=200)
+      content = models.TextField()
+      created_at = models.DateTimeField(auto_now_add=True)
+  ```
+
+  ### 2. Créer le sérialiseur
+  ```python
+  # serializers.py
+  from rest_framework import serializers
+  from .models import Article
+
+  class ArticleSerializer(serializers.ModelSerializer):
+      class Meta:
+          model = Article
+          fields = ['id', 'title', 'content', 'created_at']
+  ```
+
+  ### 3. Implémenter les vues
+  ```python
+  # views.py
+  from rest_framework import viewsets
+  from .models import Article
+  from .serializers import ArticleSerializer
+
+  class ArticleViewSet(viewsets.ModelViewSet):
+      queryset = Article.objects.all()
+      serializer_class = ArticleSerializer
+  ```
+
+  ### 4. Configurer les URLs
+  ```python
+  # urls.py
+  from django.urls import path, include
+  from rest_framework.routers import DefaultRouter
+  from .views import ArticleViewSet
+
+  router = DefaultRouter()
+  router.register(r'articles', ArticleViewSet)
+
+  urlpatterns = [
+      path('api/', include(router.urls)),
+  ]
+  ```
+
+  ## Commandes utiles
+
+  ### Tester l'API avec curl
+  ```bash
+  # GET tous les articles
+  curl http://localhost:8000/api/articles/
+
+  # POST un nouvel article
+  curl -X POST http://localhost:8000/api/articles/ \
+       -H "Content-Type: application/json" \
+       -d '{"title": "Mon article", "content": "Contenu de l'article"}'
+  ```
+
+  ### Générer un token d'authentification
+  ```bash
+  python manage.py drf_create_token <username>
+  ```
