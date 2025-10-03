@@ -38,5 +38,13 @@
     "website": "https://github.com/astral-sh/uv",
     "categories": ["package-management", "performance", "development"],
     "content_path": "tools/uv.md"
-  }
+  },
+  {
+    "slug": "django-extensions",
+    "name": "Django Extensions",
+    "summary": "Collection of custom extensions for Django including shell_plus, graph_models, and more.",
+    "website": "https://django-extensions.readthedocs.io/",
+    "categories": ["development", "debug", "productivity"],
+    "content_path": "tools/django-extensions.md"
+  }  
 ]
