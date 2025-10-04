@@ -46,5 +46,13 @@
     "website": "https://django-extensions.readthedocs.io/",
     "categories": ["development", "debug", "productivity"],
     "content_path": "tools/django-extensions.md"
-  }  
+  },
+  {
+    "slug": "black",
+    "name": "Black",
+    "summary": "The uncompromising Python code formatter. Automatically formats code to be consistent and PEP 8-compliant every time you save.",
+    "website": "https://black.readthedocs.io/en/stable/",
+    "categories": ["formatting", "development", "productivity"],
+    "content_path": "tools/black.md"
+  }
 ]
