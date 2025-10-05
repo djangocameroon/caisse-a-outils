@@ -1,0 +1,6 @@
+{
+  "slug": "django-debug-tips",
+  "title": "Top Django Debugging Tips",
+  "category": "debugging",
+  "body": "1. Use `django-debug-toolbar` for SQL query and performance insights.\n2. Leverage `django-extensions shell_plus` for interactive model testing.\n3. Use `logging` for tracking issues in production.\n4. Break down views into smaller functions for easier debugging.\n5. Write tests with `pytest-django` to catch regressions early."
+}
