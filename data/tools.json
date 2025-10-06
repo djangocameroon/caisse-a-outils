@@ -30,6 +30,7 @@
     "website": "https://www.django-rest-framework.org/",
     "categories": ["api", "rest"],
     "content_path": "tools/django-rest-framework.md"
+  }
   },
   {
     "slug": "uv",
@@ -55,4 +56,19 @@
     "categories": ["formatting", "development", "productivity"],
     "content_path": "tools/black.md"
   }
+    "slug": "django-cors-headers",
+    "name": "Django CORS Headers",
+    "summary": "Handle Cross-Origin Resource Sharing (CORS) for Django applications with ease.",
+    "website": "https://github.com/adamchainz/django-cors-headers",
+    "categories": ["api", "security", "frontend"],
+    "content_path": "tools/django-cors-headers.md"
+  },
+  {
+    "slug": "celery",
+    "name": "Celery",
+    "summary": "Distributed task queue for Django applications to handle background jobs and scheduled tasks.",
+    "website": "https://docs.celeryproject.org/",
+    "categories": ["background-tasks", "performance", "scalability"],
+    "content_path": "tools/celery.md"
+  }  
 ]
