@@ -30,6 +30,7 @@
     "website": "https://www.django-rest-framework.org/",
     "categories": ["api", "rest"],
     "content_path": "tools/django-rest-framework.md"
+  }
   },
   {
     "slug": "uv",
