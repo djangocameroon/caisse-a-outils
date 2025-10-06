@@ -30,7 +30,6 @@
     "website": "https://www.django-rest-framework.org/",
     "categories": ["api", "rest"],
     "content_path": "tools/django-rest-framework.md"
-  }
   },
   {
     "slug": "uv",
@@ -55,7 +54,8 @@
     "website": "https://black.readthedocs.io/en/stable/",
     "categories": ["formatting", "development", "productivity"],
     "content_path": "tools/black.md"
-  }
+  },
+  {
     "slug": "django-cors-headers",
     "name": "Django CORS Headers",
     "summary": "Handle Cross-Origin Resource Sharing (CORS) for Django applications with ease.",
@@ -70,5 +70,13 @@
     "website": "https://docs.celeryproject.org/",
     "categories": ["background-tasks", "performance", "scalability"],
     "content_path": "tools/celery.md"
-  }  
+  },
+  {
+    "slug": "git-cleanup",
+    "name": "Git Cleanup",
+    "summary": "A lightweight shell script to remove local Git branches that have already been merged into the main branch.",
+    "website": "https://github.com/mloughran/git-cleanup",
+    "categories": ["devops", "git", "automation"],
+    "content_path": "tools/git-cleanup.md"
+  }
 ]
