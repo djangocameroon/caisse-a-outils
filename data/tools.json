@@ -78,6 +78,15 @@
     "website": "https://dramatiq.io/",
     "categories": ["background-tasks", "performance", "scalability"],
     "content_path": "tools/dramatiq.md"
-  }
-    
+  },
+
+    {
+  "slug": "sentry",
+  "name": "Sentry",
+  "summary": "Real-time error tracking and performance monitoring for Django and other frameworks.",
+  "website": "https://sentry.io/welcome/",
+  "categories": ["monitoring", "debug", "performance", "production"],
+  "content_path": "tools/sentry.md"
+}
+
 ]
