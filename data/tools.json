@@ -78,6 +78,13 @@
     "website": "https://dramatiq.io/",
     "categories": ["background-tasks", "performance", "scalability"],
     "content_path": "tools/dramatiq.md"
-  }
-    
+  },
+  {
+  "slug": "scikit-learn",
+  "name": "Scikit-learn",
+  "summary": "Une bibliothèque Python open-source complète pour l'apprentissage automatique, offrant des algorithmes de classification, régression, clustering, réduction de dimensionnalité, sélection de modèles et prétraitement.",
+  "website": "https://scikit-learn.org/stable/",
+  "categories": ["machine-learning", "data-science", "statistics", "artificial-intelligence"],
+  "content_path": "tools/scikit-learn.md"
+}
 ]
