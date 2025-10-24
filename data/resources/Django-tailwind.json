@@ -1,0 +1,8 @@
+{
+    "slug": "django-tailwind",
+    "title": " Tailwind CSS dans Django avec django-tailwind",
+    "summary": "Apprends à utiliser django-tailwind pour styliser tes projets Django avec Tailwind CSS sans configuration complexe.",
+    "categories": ["frontend", "django"],
+    "content_path": "resources/content/django_tailwind.md"
+  }
+  
