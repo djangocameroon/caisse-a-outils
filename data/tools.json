@@ -79,14 +79,20 @@
     "categories": ["background-tasks", "performance", "scalability"],
     "content_path": "tools/dramatiq.md"
   },
-
-    {
-  "slug": "sentry",
-  "name": "Sentry",
-  "summary": "Real-time error tracking and performance monitoring for Django and other frameworks.",
-  "website": "https://sentry.io/welcome/",
-  "categories": ["monitoring", "debug", "performance", "production"],
-  "content_path": "tools/sentry.md"
-}
-
+  {
+    "slug": "sentry",
+    "name": "Sentry",
+    "summary": "Real-time error tracking and performance monitoring for Django and other frameworks.",
+    "website": "https://sentry.io/welcome/",
+    "categories": ["monitoring", "debug", "performance", "production"],
+    "content_path": "tools/sentry.md"
+  },
+  {
+    "slug": "scikit-learn",
+    "name": "Scikit-learn",
+    "summary": "Une bibliothèque Python open-source complète pour l'apprentissage automatique, offrant des algorithmes de classification, régression, clustering, réduction de dimensionnalité, sélection de modèles et prétraitement.",
+    "website": "https://scikit-learn.org/stable/",
+    "categories": ["machine-learning", "data-science", "statistics", "artificial-intelligence"],
+    "content_path": "tools/scikit-learn.md"
+  }
 ]
